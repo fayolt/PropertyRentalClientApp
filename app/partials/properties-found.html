@@ -1,0 +1,21 @@
+<table class="table table-striped" data-card-view="true">
+  <thead>
+  <tr>
+    <th colspan="3"><h3>All Properties</h3></th>
+  </tr>
+  <tr>
+    <th>Location</th>
+    <th>Area</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tr ng-repeat="property in fproperties.property">
+    <td>{{property.location}}</td>
+    <td>{{property.area}}</td>
+    <td>
+      <a class="btn btn-primary" ui-sref="viewProperty({id:property.id})">View</a>
+      <a class="btn btn-danger"  ng-click="addBooking(property.id)">Book</a>
+    </td>
+  </tr>
+</table>

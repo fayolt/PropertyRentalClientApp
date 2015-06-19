@@ -1,0 +1,45 @@
+<div class="form-group">
+	<label for="type" class="col-sm-2 control-label">Property Type</label>
+	<div class="input-group">
+		<input type="text" class="form-control" id="type" ng-model="$parent.detail.type"/>
+		<span class="input-group-addon"></span>
+	</div>
+</div>
+<div class="form-group">
+	<div class="dropdown">
+		<label for="from" class="col-sm-2 control-label">From</label>
+        	<a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="">
+            	<div class="input-group">
+              		<input type="text" class="form-control" id="from" data-ng-model="$parent.detail.from"/>
+              		<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            	</div>    
+        	</a>
+        	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            	<datetimepicker data-ng-model="$parent.detail.from"
+                            data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }">
+            	</datetimepicker>
+        	</ul>
+    </div>
+</div>
+<div class="form-group">
+    <div class="dropdown">
+    	<label for="to" class="col-sm-2 control-label">To</label>
+        	<a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="">    
+            	<div class="input-group">
+              		<input type="text" class="form-control" id="to" data-ng-model="$parent.detail.to"/>
+              		<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            	</div>    
+        	</a>
+        	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            	<datetimepicker data-ng-model="$parent.detail.to"
+                            data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }">
+            	</datetimepicker>
+        	</ul>
+    </div>
+</div>
+<div class="form-group">
+	<div class="col-sm-offset-2 input-group-btn">
+		<input type="submit" class="btn btn-primary" value="submit"/>
+			<!--<span class="glyphicon glyphicon-save"></span>Submit-->
+	</div>
+</div>
